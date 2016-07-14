@@ -557,7 +557,7 @@ sub printHelp {
         "    -showAll\t\t\tOutput all sequences, not only flagged sequences\t\t\t(Default: FALSE)\n",
         "    -IRD\t\t\tUse IRD error codes\t\t\t\t\t\t\t(Default: FALSE)\n",
         "    -hoffMatchMin <integer>\tMinimum number of base pair matches to be classified as Hoffman Primer\t(Default: 5)\n",
-        "    -blastMatchMin <integer>\tMinimum size of extraneous sequence to be classified as cloning plasmid\t(Default: 12)\n".
+        "    -blastMatchMin <integer>\tMinimum size of extraneous sequence to be classified as cloning plasmid\t(Default: 12)\n",
         "    -printEndLength <integer>\tNumber of base pairs to print on 3' and 5' ends\t\t\t\t(Default: 50)\n",
         "-----------------------------------------\n\n",
          "Email ",'Timmy Huang (th174@duke.edu)'," with any further questions.\n\n");
