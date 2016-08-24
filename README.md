@@ -1,4 +1,3 @@
-Created for Athens Academy's Influenza Sequencing Project.
 
 
 ----------------USAGE HELP----------------
@@ -23,8 +22,15 @@ Command Line Flags:
         -printEndLength <integer>		Number of base pairs to print on 3' and 5' ends								(Default: 50)
 
 
+To install:
 
-			
+First, make sure you have an updated version of Perl 5 installed.
+
+Then, download and unzip all the files in this repository into a local directory.
+
+Navigate to the directory through the command line, and run this program by calling "perl AacadFluAlign.pl"
+
+See the Usage Help above for more details.
 
 	
-
+Created for Athens Academy's Influenza Sequencing Project.
