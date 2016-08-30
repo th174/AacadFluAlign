@@ -41,6 +41,7 @@ This program operates by doing a systematic analysis of MUSCLE MSA results. It c
 AacadFluAlign first separates the sample FASTA dataset into smaller, more manageable files (Default size: 1 sequence per file). This facilitates multithreaded data processing through the usage of perlfork, optimizing CPU usage and significantly cutting down on computation time. Each separate alignment is firsed parsed then analyzed using an adaptation of Athens Academy Influenza Project's methodology. 
 
 First, the program identifies and classifies extraneous sequences. This program recognizes any sample sequence aligned before the first base in the reference sequence as an extraneous sequence on the 5' end, and any sample sequence aligned after the last base in the reference sequences is recognized as an extraneous sequence on the 3' end. The program then attempts to classify the extraneous sequence based on its contents. 
+
         -- An extraneous lone 5' T or a lone 3' A is recognized as a Taq Polymerase error and indicated by Taq on the spreadsheet
         -- An extraneous sequence consistent with published influenza primers by Hoffman et al. is classified as a Primer error and indicated by Pri on the spreadsheet
         -- An extraneous sequence with length more than 12 bp is suspected to be cloning plasmid sequence, indicated with "clo" which the spreadsheet prompts the user to verify with BLAST
@@ -49,6 +50,7 @@ First, the program identifies and classifies extraneous sequences. This program 
 Next, the program identifies potential errors in the conserved terminal regions, or the first 12 bp and the last 13 bp, of the chosen gene segment. Any base pairs that disagree between the reference sequence and the sample sequence within the first 12 bp or last 13 bp of the reference sequence are classified as a CTS error, and indicated as such on the spreadsheet.
 
 Then, program then proceeds to identify and classify potential errors in the internal portion of the sample gene segment using the following algorithm. 
+
         -- A dash(-) in the reference sequence coinciding with a base pair in the sample sequence is classified as an insertion and indicated by "ins" on the spreadsheet.
         -- A base pair in the reference sequence coinciding with a dash(-) in the sample sequence is classified as a deletion and indicated as "del" on the spreadsheet.
         -- Adenine insertions or deletions in the sample sequence in positions coinciding with the Poly A tail of the reference sequence are classified as "Poly A", and are noted as such in the spreadsheet.
@@ -58,6 +60,7 @@ The program then further classifies these errors by the location in which they o
 Next, the program records the number of mixed bases that occur in the sample sequence. A mixed base is defined as the bases R,Y,S,W,K,M,B,D,H,V, and N in the sample sequence. If the total amount of mixed bases is found to exceed 0.5% of length of the sample sequence, then they are indicated by "mix" as well as the region in which they occur, on the spreadsheet.
 
 Over the course of this project, the above algorithm frequently and erroneously classified MUSCLE alignment mistakes as sequence errors. These alignment mistakes were generally characterized in the sample sequence by a short small number of base pairs, or orphan sequence, separated from the rest of the gene segment by large numbers of consecutive dashes. This program attempts to reduce the rate of false positives by identifying orphan sequences and removing them from the spreadsheet. This program classifies orphan sequences with the following rules
+
         -- An orphan sequence must either begin and end within the first 2% of the gene segment or the last 2% of the gene segment.
         -- An orphan sequence must be separated from the rest of the gene segment by a consecutive sequence of dashes with length 20 or more.
 Sequences that do not meet the two rules above but are close to meeting them are identified as possible orphans on the spreadsheet, and prompts the user to manually check if deemed necessary.
