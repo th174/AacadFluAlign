@@ -24,7 +24,7 @@ Command Line Flags:
 
 To install:
 
-First, make sure you have an updated version of Perl 5 installed.
+First, make sure to have an updated version of Perl 5 installed. Visit www.perl.org/get.html to obtain the correct perl distribution for your system.
 
 Then, download and unzip all the files in this repository into a local directory.
 
@@ -32,5 +32,6 @@ Navigate to the directory through the command line, and run this program by call
 
 See the Usage Help above for more details.
 
-	
-Created for Athens Academy's Influenza Sequencing Project.
+---------------------------------------------------------------------------------------
+
+This program was tested on three platforms, Windows 10, Linux, and Mac OS X.
