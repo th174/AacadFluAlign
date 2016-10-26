@@ -2,7 +2,7 @@
 
 ----------------USAGE HELP----------------
 
-EXAMPLE USAGE:		perl AacadFluAlign.pl -in PB1remainder-all.fasta -seg PB1 -clean
+EXAMPLE USAGE:		perl AacadFluAlign.pl -in PB1input-all.fasta -seg PB1 -clean
 
 
 Command Line Flags:
