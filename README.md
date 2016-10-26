@@ -71,4 +71,4 @@ Finally, this program outputs its data using a TSV (tab-separated values) format
 
 Credit for MUSCLE v3.0 goes to Bob Edgar http://www.drive5.com/muscle/manual/papers.html
 
-Credit for this program goes to Timmy Huang, Nikki Chester, David Suarez, and the Athens Acadmey Influenza Genome Project
+Credit for this program goes to Timmy Huang, Nikki Chester, David Suarez, and the Athens Academy Influenza Genome Project
